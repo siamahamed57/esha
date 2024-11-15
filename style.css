@@ -1,0 +1,168 @@
+/* Love Glow Effect for Image */
+.love-glow {
+    animation: loveGlow 2s infinite;
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.7); /* Pink Glow */
+  }
+  
+  @keyframes loveGlow {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.7);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(255, 105, 180, 1);
+    }
+  }
+  
+  /* Love Bounce Animation for Text */
+  .love-bounce {
+    animation: loveBounce 2s infinite;
+  }
+  
+
+  
+  /* Button Hover Effect */
+  button:hover {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background-color: #e91e63;
+  }
+  /* Love Glow Effect for Image */
+.love-glow {
+    animation: loveGlow 2s infinite;
+    box-shadow: 0 0 20px rgba(255, 20, 147, 0.7); /* Pink Glow */
+  }
+  
+  @keyframes loveGlow {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(255, 20, 147, 0.7);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(255, 20, 147, 1);
+    }
+  }
+  
+  /* Love Bounce Animation for Text */
+  .love-bounce {
+    animation: loveBounce 2s infinite;
+  }
+  
+ 
+  
+  /* Button Hover Effect */
+  button:hover {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  /* Love Glow Effect for Image */
+.love-glow {
+    animation: loveGlow 2s infinite;
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.7); /* Pink Glow */
+  }
+  
+  @keyframes loveGlow {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.7);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(255, 105, 180, 1);
+    }
+  }
+  
+  /* Button Hover Effect */
+  button:hover {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background-color: #e91e63; /* Slightly darker pink on hover */
+  }
+  /* Love Effect Enhancements */
+img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  button:hover {
+    background: linear-gradient(to right, #f43f5e, #d946ef, #9333ea);
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  #finalDate, #finalTime {
+    transition: color 0.3s ease;
+  }
+  
+  #finalDate:hover, #finalTime:hover {
+    color: #d946ef;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  /* Love Effect for Dropdown and Button */
+#movieSelect {
+    background-color: #fdf9ff;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #5a2d82;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  #movieSelect:hover {
+    background-color: #faedff;
+    transform: scale(1.02);
+    border-color: #d946ef;
+  }
+  
+  #finalStepBtn {
+    display: block;
+    margin: auto;
+    transition: all 0.3s ease;
+  }
+  
+  #finalStepBtn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #c084fc, #f43f5e);
+  }
+  /* Love Effect for Checkboxes */
+.food-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    color: #ff4081;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .food-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .food-item input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ff4081;
+    border-radius: 50%;
+    position: relative;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .food-item input[type="checkbox"]:checked {
+    background: #ff4081;
+    border-color: #ff4081;
+  }
+  
+  .food-item input[type="checkbox"]:checked::after {
+    content: '❤';
+    font-size: 14px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .food-item span {
+    margin-left: 10px;
+  }
+  

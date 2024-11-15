@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date Invitation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 min-h-screen flex items-center justify-center">
+
+  <div id="app" class="w-full max-w-lg p-6 bg-white rounded-lg shadow-md text-center">
+   <!-- Step 1: Ask for the Date -->
+<div id="step1" class="text-center">
+    <img 
+      src="img/41c885962c25860bf8bf0ae6ebf8255c.jpg" 
+      alt="Funny Cat" 
+      class="mx-auto rounded-lg mb-4 love-glow"
+    >
+    <h1 class="text-3xl font-bold text-pink-500 mb-6 love-bounce">
+      Esha Baby! Would you like to go out with me for a date? 😘😘
+    </h1>
+    <div class="space-x-4">
+      <button 
+        id="yesBtn" 
+        class="px-6 py-3 bg-gradient-to-r from-green-400 to-green-600 text-white font-semibold rounded-full shadow-lg hover:scale-110 transform transition duration-300"
+      >
+        Yes
+      </button>
+      <button 
+        id="noBtn" 
+        class="px-6 py-3 bg-gradient-to-r from-red-400 to-red-600 text-white font-semibold rounded-full shadow-lg hover:scale-110 transform transition duration-300"
+      >
+        No
+      </button>
+    </div>
+  </div>
+  
+
+    <!-- Step 2: If "No" is clicked -->
+<div id="stepNo" class="hidden text-center">
+    <img 
+      src="img/download (1).jpg" 
+      alt="Funny Cat" 
+      class="mx-auto rounded-lg mb-4 sad-animation"
+    >
+    <h1 class="text-3xl font-extrabold text-red-500 mb-6 animate-bounce">
+      I love you ❤️ Please press Yes!
+    </h1>
+    <p class="text-lg mb-6 text-gray-700">
+      😢 I'm heartbroken without you - ESHA BABY. 💔
+    </p>
+    <button 
+      id="backBtn" 
+      class="px-6 py-3 bg-gradient-to-r from-blue-400 to-blue-600 text-white font-semibold rounded-full shadow-xl hover:scale-110 transform transition duration-300"
+    >
+      Go Back
+    </button>
+  </div>
+  
+
+   <!-- Step 3: If "Yes" is clicked -->
+<div id="step2" class="hidden text-center">
+    <img 
+      src="img/cat-cat-love.gif" 
+      alt="Funny Cat" 
+      class="mx-auto rounded-lg mb-4 love-glow"
+    >
+    <h1 class="text-3xl font-bold text-pink-500 mb-6 love-bounce">
+      Don't go anywhere! ❤️❤️❤️❤️
+    </h1>
+    <button 
+      id="nextStepBtn" 
+      class="px-6 py-3 bg-gradient-to-r from-pink-400 to-pink-600 text-white font-semibold rounded-full shadow-lg hover:scale-110 transform transition duration-300 hover:bg-pink-700"
+    >
+      Click Me
+    </button>
+  </div>
+  
+    <!-- Step 4: Select Date and Time -->
+   <!-- Step 3: If "Yes" is clicked -->
+<div id="step3" class="hidden text-center">
+    <img 
+      src="img/3nz60q.jpg" 
+      alt="Funny Cat" 
+      class="mx-auto rounded-lg mb-4 love-glow"
+    >
+    <h1 class="text-2xl font-bold text-pink-500 mb-6">
+      When are you free? 😁❤️
+    </h1>
+    <input 
+      type="date" 
+      id="dateInput" 
+      class="block w-full p-2 border rounded-lg mb-4" 
+      required
+    >
+    <input 
+      type="time" 
+      id="timeInput" 
+      class="block w-full p-2 border rounded-lg mb-4" 
+      required
+    >
+    <button 
+      id="foodStepBtn" 
+      class="px-4 py-2 bg-gradient-to-r from-pink-400 to-pink-600 text-white rounded-lg hover:bg-pink-700 transition duration-300 transform hover:scale-110"
+    >
+      Next
+    </button>
+  </div>
+  
+   <!-- Step 5: Choose Food -->
+<div id="step4" class="hidden">
+    <h1 class="text-2xl font-bold mb-6 text-center text-pink-600">
+      What do you want to eat? 😍💕🥰😘
+    </h1>
+    <div id="foodItems" class="grid grid-cols-2 gap-4 text-left">
+      <!-- Food items -->
+      <label class="food-item">
+        <input type="checkbox" name="food" value="Pizza">
+        <span>🍕 Pizza</span>
+      </label>
+      <label class="food-item">
+        <input type="checkbox" name="food" value="Burger">
+        <span>🍔 Burger</span>
+      </label>
+      <label class="food-item">
+        <input type="checkbox" name="food" value="Milkshake">
+        <span>🥤 Milkshake</span>
+      </label>
+      <label class="food-item">
+        <input type="checkbox" name="food" value="Fried Chicken">
+        <span>🍗 Fried Chicken</span>
+      </label>
+      <label class="food-item">
+        <input type="checkbox" name="food" value="Pancake">
+        <span>🥞 Pancake</span>
+      </label>
+      <label class="food-item">
+        <input type="checkbox" name="food" value="Taco">
+        <span>🌮 Taco</span>
+      </label>
+      <label class="food-item">
+        <input type="checkbox" name="food" value="Soft drink">
+        <span>🥤 Soft drink</span>
+      </label>
+      <label class="food-item">
+        <input type="checkbox" name="food" value="Bacon">
+        <span>🥓 Bacon</span>
+      </label>
+      <label class="food-item">
+        <input type="checkbox" name="food" value="Noodle">
+        <span>🍜 Noodle</span>
+      </label>
+      <label class="food-item">
+        <input type="checkbox" name="food" value="Onion ring">
+        <span>🧅 Onion ring</span>
+      </label>
+      <label class="food-item">
+        <input type="checkbox" name="food" value="Chip">
+        <span>🍟 Chip</span>
+      </label>
+    </div>
+    <button
+      id="movieStepBtn"
+      class="mt-4 px-6 py-2 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300"
+    >
+      Next
+    </button>
+  </div>
+  
+
+    <!-- Step 6: Choose Movie -->
+<div id="step5" class="hidden">
+    <h1 class="text-2xl font-bold mb-6 text-center text-purple-700">
+      What do you want to watch? 😍🎥💕
+    </h1>
+    <select id="movieSelect" class="block w-full p-3 border-2 border-purple-500 rounded-lg mb-4 text-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-400 transition duration-300">
+      <option value="" disabled selected>🎬 Select a movie</option>
+      <optgroup label="🎃 Horror">
+        <option value="The Conjuring">The Conjuring</option>
+        <option value="Insidious">Insidious</option>
+        <option value="Hereditary">Hereditary</option>
+        <option value="It (2017)">It (2017)</option>
+        <option value="A Quiet Place">A Quiet Place</option>
+      </optgroup>
+      <optgroup label="🔥 Latest">
+        <option value="Oppenheimer">Oppenheimer</option>
+        <option value="Barbie">Barbie</option>
+        <option value="The Marvels">The Marvels</option>
+        <option value="Killers of the Flower Moon">Killers of the Flower Moon</option>
+        <option value="Mission: Impossible – Dead Reckoning Part One">Mission: Impossible – Dead Reckoning Part One</option>
+      </optgroup>
+      <optgroup label="❤️ Classic">
+        <option value="Inception">Inception</option>
+        <option value="The Notebook">The Notebook</option>
+        <option value="Avengers">Avengers</option>
+        <option value="Titanic">Titanic</option>
+      </optgroup>
+    </select>
+    <button id="finalStepBtn" class="px-6 py-2 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white rounded-lg shadow-lg hover:scale-105 transform transition-all duration-300">
+      Continue
+    </button>
+  </div>
+  
+
+    <!-- Step 7: Final Confirmation -->
+    <div id="step6" class="hidden text-center">
+        <img src="img/41c885962c25860bf8bf0ae6ebf8255c (1).jpg" alt="Funny Cat" class="mx-auto rounded-lg mb-6 shadow-lg hover:scale-110 transform transition duration-300">
+        <h1 class="text-3xl font-extrabold mb-6 text-pink-500">See you soon! 💖😊</h1>
+        <p class="text-lg mb-6 text-purple-700">Don't forget our date on <span id="finalDate" class="font-semibold text-pink-600"></span> at <span id="finalTime" class="font-semibold text-pink-600"></span>.</p>
+        <button id="screenshotBtn" class="px-6 py-3 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white font-semibold rounded-full shadow-xl hover:scale-110 hover:bg-pink-600 transform transition duration-300">
+            Take screenshot! 🎉
+        </button>
+    </div>
+  
+
+  <script>
+    // Step Handlers
+    document.getElementById('yesBtn').addEventListener('click', () => {
+      document.getElementById('step1').classList.add('hidden');
+      document.getElementById('step2').classList.remove('hidden');
+    });
+
+    document.getElementById('noBtn').addEventListener('click', () => {
+      document.getElementById('step1').classList.add('hidden');
+      document.getElementById('stepNo').classList.remove('hidden');
+    });
+
+    document.getElementById('backBtn').addEventListener('click', () => {
+      document.getElementById('stepNo').classList.add('hidden');
+      document.getElementById('step1').classList.remove('hidden');
+    });
+
+    document.getElementById('nextStepBtn').addEventListener('click', () => {
+      document.getElementById('step2').classList.add('hidden');
+      document.getElementById('step3').classList.remove('hidden');
+    });
+
+    document.getElementById('foodStepBtn').addEventListener('click', () => {
+      const date = document.getElementById('dateInput').value;
+      const time = document.getElementById('timeInput').value;
+
+      if (!date || !time) {
+        alert('অইই একটা তারিখ চাপো😘');
+        return;
+      }
+
+      document.getElementById('step3').classList.add('hidden');
+      document.getElementById('step4').classList.remove('hidden');
+    });
+
+    document.getElementById('movieStepBtn').addEventListener('click', () => {
+      const selectedFoods = Array.from(document.querySelectorAll('input[name="food"]:checked')).map(item => item.value);
+
+      if (selectedFoods.length === 0) {
+        alert('কি কি খাবা সিলেক্ট করো শোনা😘😘');
+        return;
+      }
+
+      document.getElementById('step4').classList.add('hidden');
+      document.getElementById('step5').classList.remove('hidden');
+    });
+
+    document.getElementById('finalStepBtn').addEventListener('click', () => {
+      const movie = document.getElementById('movieSelect').value;
+
+      if (!movie) {
+        alert('কি মোভি দেখবা বাবাই🥰🥰');
+        return;
+      }
+
+      const date = document.getElementById('dateInput').value;
+      const time = document.getElementById('timeInput').value;
+
+      document.getElementById('finalDate').textContent = date;
+      document.getElementById('finalTime').textContent = time;
+      document.getElementById('step5').classList.add('hidden');
+      document.getElementById('step6').classList.remove('hidden');
+    });
+    // Screenshot functionality
+    document.getElementById('screenshotBtn').addEventListener('click', () => {
+      html2canvas(document.getElementById('app')).then((canvas) => {
+        const imgData = canvas.toDataURL('image/png');
+        const link = document.createElement('a');
+        link.href = imgData;
+        link.download = 'date-invitation.png';
+        link.click();
+      });
+    });
+  </script>
+  <script>
+    document.getElementById('screenshotBtn').addEventListener('click', function () {
+        var element = document.getElementById("step6");
+        html2canvas(element).then(function(canvas) {
+            var img = canvas.toDataURL("image/png");
+            var link = document.createElement('a');
+            link.href = img;
+            link.download = 'screenshot.png';
+            link.click();
+        });
+    });
+</script>
+
+</body>
+</html>
